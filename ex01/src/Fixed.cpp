@@ -8,7 +8,6 @@ Fixed::Fixed() : _num_value(0)
 Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->_num_value = other._num_value;
 
     //important part
     *this = other;
@@ -69,11 +68,12 @@ void Fixed::setRawBits(int const raw)
 
 int Fixed::toInt() const
 {   
-    return (this->_num_value >> 8); 
+    return (this->_num_value >> this->_num_frac_bits); 
 };
 
 
-float Fixed::toFloat() const
+float Fixed::toFloat() const 
 {
-    return static_cast<float>(this->getRawBits() / (1 << this->_num_frac_bits));
+    return static_cast<float>(this->_num_value) 
+                                / static_cast<float>(1 << this->_num_frac_bits);
 };
