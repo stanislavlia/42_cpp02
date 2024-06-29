@@ -2,6 +2,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -17,8 +18,7 @@ class Fixed
         Fixed(const Fixed& other);
 
         Fixed& operator=(const Fixed& other);
-        //Need to overload <<        
-
+        friend std::ostream& operator<<(std::ostream& o, const Fixed& num);
         
         int getRawBits() const;
         void setRawBits(int const raw);
