@@ -19,4 +19,9 @@ class Point
         Fixed getY() const;
 };
 
+
+float compute_distance(Point p1, Point p2);
+bool bsp( Point const a, Point const b, Point const c, Point const point); 
+
+
 #endif

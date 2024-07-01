@@ -28,6 +28,8 @@ class Fixed
         Fixed operator*(const Fixed& other);
         Fixed operator/(const Fixed& other);
 
+        float sqrt() const;
+
         //Increment & Decrement ops
         Fixed operator++();//for prefix
         Fixed operator--();
