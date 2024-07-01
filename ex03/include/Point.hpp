@@ -20,7 +20,7 @@ class Point
 };
 
 
-float compute_distance(Point p1, Point p2);
+Fixed abs(const Fixed val);
 bool bsp( Point const a, Point const b, Point const c, Point const point); 
 
 
