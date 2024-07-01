@@ -6,8 +6,8 @@
 class Point
 {
     private:
-        const Fixed x;
-        const Fixed y;
+        const Fixed _x;
+        const Fixed _y;
 
     public:
         Point();
@@ -15,6 +15,8 @@ class Point
         Point(const Point& other);
         ~Point();
         Point& operator=(const Point& other);
+        Fixed getX() const;
+        Fixed getY() const;
 };
 
 #endif
