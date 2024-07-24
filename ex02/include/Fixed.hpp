@@ -28,8 +28,8 @@ class Fixed
         //Increment & Decrement ops
         Fixed& operator++();//for prefix
         Fixed& operator--();
-        Fixed& operator++(int);//for postfix
-        Fixed& operator--(int);
+        Fixed operator++(int);//for postfix
+        Fixed operator--(int);
 
 
         //Comparison OPS

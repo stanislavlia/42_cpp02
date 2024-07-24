@@ -130,13 +130,13 @@ Fixed& Fixed::operator--()
     return *this;
 };
 
-Fixed& Fixed::operator++(int)
+Fixed Fixed::operator++(int)
 {
     ++(this->_num_value);
     return *this;
 };
 
-Fixed& Fixed::operator--(int)
+Fixed Fixed::operator--(int)
 {
     --(this->_num_value);
     return *this;
