@@ -18,10 +18,7 @@ class Fixed
         Fixed(const Fixed& other);
 
         Fixed& operator=(const Fixed& other);
-        //we allow member func from another class to acess out data
-        friend std::ostream& operator<<(std::ostream& o, const Fixed& num);
-
-
+    
         //arithmetic ops
         Fixed operator+(const Fixed& other);
         Fixed operator-(const Fixed& other);
@@ -58,6 +55,6 @@ class Fixed
 };
 
 
-
+std::ostream& operator<<(std::ostream& o, const Fixed& num);
 
 #endif

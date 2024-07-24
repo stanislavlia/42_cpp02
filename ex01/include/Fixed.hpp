@@ -18,13 +18,14 @@ class Fixed
         Fixed(const Fixed& other);
 
         Fixed& operator=(const Fixed& other);
-         //we allow member func from another class to acess out data
-        friend std::ostream& operator<<(std::ostream& o, const Fixed& num);
     
         int getRawBits() const;
         void setRawBits(int const raw);
         float toFloat() const;
         int toInt() const;
 };
+
+std::ostream& operator<<(std::ostream& o, const Fixed& num);
+
 
 #endif
