@@ -119,13 +119,13 @@ Fixed Fixed::operator/(const Fixed& other)
 }
 
 //==============INCREMENTAL OPERATORS====================
-Fixed Fixed::operator++()
+Fixed& Fixed::operator++()
 {
     ++(this->_num_value);
     return *this;
 };
 
-Fixed Fixed::operator--()
+Fixed& Fixed::operator--()
 {
     --(this->_num_value);
     return *this;
